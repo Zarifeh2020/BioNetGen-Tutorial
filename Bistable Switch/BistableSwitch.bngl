@@ -1,0 +1,41 @@
+begin model
+
+begin parameters
+ p1 0.01  
+ p2 1
+ p3 0.4
+ p4 0.01
+end parameters
+
+begin molecule types
+K1(Y~0~P)
+P(b)
+end molecule types
+
+begin compartments
+end compartments
+
+begin species
+ K1(Y~0) 100
+ P(b) 10
+end species
+
+begin observables
+ Molecules K1p K1(Y~P)
+end observables
+
+begin functions
+end functions
+
+begin reaction rules
+  R1: K1(Y~0) -> K1(Y~P)  p1
+  R2: K1(Y~0) + K1(Y~P) -> K1(Y~P) + K1(Y~P) p4
+  R3: K1(Y~P) + P(b) <-> K1(Y~P!1).P(b!1)  p3, p2
+  R4: K1(Y~P!1).P(b!1) -> K1(Y~0) + P(b) p2
+end reaction rules
+
+end model
+
+#Actions
+generate_network({overwrite=>1})
+simulate({method=>"ode",t_end=>100,n_steps=>200})
