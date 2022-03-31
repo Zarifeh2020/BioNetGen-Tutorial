@@ -223,7 +223,7 @@ Then you will have this default :code:`RuleLine`:
 
 :code:`RuleName` is an optional string naming the reaction. In this example we select the name :code:`R1, R2, ...` 
 
-:code:`Reactants` is a list of reactant species separated by :code:`+`
+:code:`Reactants` is a list of reactant species separated by :code: `+`
 
 Arrow indicates whether the reaction is unidirectional :code:`( -> )` or reversible :code:`( <-> )`
 
