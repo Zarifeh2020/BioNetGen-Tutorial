@@ -5,7 +5,7 @@ BioNetGen Example
 Biastable Switch Example
 ==========================
 
-In this example, we will try to focuse on some more details in BioNetGen modeling. We consider a simple four reactions network which illustrates a switch 
+In this example, we will try to focuse on more details in BioNetGen modeling. We consider a simple four reactions network which illustrates a switch 
 including two enzymes, a kinase and a phosphatase. The main reason of presenting this example is describing how to define the components and states of the molecules.
 The main network of reactions in this model is depicted in the image below, which was taken from the original study. You can find the paper `here <https://www.pnas.org/doi/10.1073/pnas.82.9.3055>`_
 
